@@ -15,16 +15,8 @@ const BookService = () => {
         const name = form.name.value;
         const date = form.date.value;
         const email = user?.email;
-        const booking = {
-            customerName: name,
-            email,
-            img,
-            date,
-            service: title,
-            service_id: _id,
-            price: price
-        }
-
+        const booking =
+            { customerName: name, email, img, date, service: title, service_id: _id, price: price }
         console.log(booking);
 
         fetch('http://localhost:5000/bookings', {
@@ -37,7 +29,7 @@ const BookService = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.insertedId){
+                if (data.insertedId) {
                     alert('service booked successfully');
                 }
             })

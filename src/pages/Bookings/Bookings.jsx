@@ -65,7 +65,6 @@ const Bookings = () => {
                         <tr>
                             <th>
                                 <label>
-                                    <input type="checkbox" className="checkbox" />
                                 </label>
                             </th>
                             <th>Image</th>

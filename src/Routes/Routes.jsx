@@ -45,13 +45,13 @@ const router = createBrowserRouter([
         element: <SignUp></SignUp>
       },
       {
+        path: '/bookings',
+        element: <PrivateRoute><Bookings></Bookings></PrivateRoute>
+      },
+      {
         path: '/bookService/:id',
         element: <BookService></BookService>,
         loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
-      },
-      {
-        path: '/bookings',
-        element: <PrivateRoute><Bookings></Bookings></PrivateRoute>
       },
     ]
   },
